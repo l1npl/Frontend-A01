@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>แบบฟอร์มลงทะเบียน</title>
+<link rel="stylesheet" href="style.css">
+<head>
+<style>
+    body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 80%;
+  max-width: 1000px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-container {
+  padding: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+}
+#btsend{
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="header-text">ลงทะเบียนสำหรับผู้สนใจเช่าพื้นที่สินค้า</div>
+  </header>
+  <section class="form-container">
+    <form action="/submit-your-form-handler" method="post">
+      <div class="form-group">
+        <label for="company_name">ชื่อบริษัท:</label>
+        <input type="text" id="company_name" name="company_name">
+      </div>
+      <div class="form-group">
+        <label for="booth_size">ขนาดบูธ:</label>
+        <select id="booth_size" name="booth_size">
+          <option value="">--โปรดเลือก--</option>
+          <option value="10x10">10x10</option>
+          <option value="15x15">15x15</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="num_chairs">จำนวนเก้าอี้:</label>
+        <input type="number" id="num_chairs" name="num_chairs" min="1">
+      </div>
+      <div class="form-group">
+        <label for="contact_name">ชื่อผู้ติดต่อ:</label>
+        <input type="text" id="contact_name" name="contact_name">
+      </div>
+      <div class="form-group">
+        <label for="contact_phone">เบอร์ผู้ติดต่อ:</label>
+        <input type="text" id="contact_phone" name="contact_phone">
+      </div>
+      <div class="form-group" id="btsend">
+      <button type="submit">ยืนยันข้อมูล</button>
+      </div>
+    </form>
+  </section>
+  <a href="index.html" class="back-button">กลับไปหน้าแรก</a>
+</div>
+</body>
+</html>
